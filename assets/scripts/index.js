@@ -12,3 +12,12 @@ addButton.addEventListener("click", () => {
   input.value = "";
   input.focus();
 });
+
+document.addEventListener("click", (event) => {
+  const target = event.target;
+
+  if (target.classList.contains("btn-danger")) {
+    const li = target.parentElement;
+    list.removeChild(li);
+  }
+});
